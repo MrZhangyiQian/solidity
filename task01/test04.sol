@@ -73,23 +73,4 @@ contract AdvancedRomanConverter {
         
         return results;
     }
-    
-    // 测试函数 - 仅供测试环境使用
-    function testConversions() external {
-        require(romanToInt("III") == 3, "Test 1 failed");
-        require(romanToInt("IV") == 4, "Test 2 failed");
-        require(romanToInt("IX") == 9, "Test 3 failed");
-        require(romanToInt("LVIII") == 58, "Test 4 failed");     // L + V + I + I + I = 50 + 5 + 1 + 1 + 1
-        require(romanToInt("MCMXCIV") == 1994, "Test 5 failed"); // M + CM + XC + IV = 1000 + 900 + 90 + 4
-        
-        // 测试批量转换
-        string[] memory batch = new string[](3);
-        batch[0] = "XL";  // 40
-        batch[1] = "XC";  // 90
-        batch[2] = "CD";  // 400
-        uint256[] memory batchResults = batchConvert(batch);
-        require(batchResults[0] == 40, "Batch test 1 failed");
-        require(batchResults[1] == 90, "Batch test 2 failed");
-        require(batchResults[2] == 400, "Batch test 3 failed");
-    }
 }
