@@ -43,6 +43,6 @@ contract SimpleNFT is ERC721URIStorage, Ownable {
             msg.sender == owner,
             "Only token owner can lock"
         );
-        // 在实际应用中，您需要添加锁定状态存储
+        // 测试部署地址 https://testnets.opensea.io/assets/sepolia/0xe6220d218d7fb528908a92d1ad9929ca5a979452/0/
     }
 }
